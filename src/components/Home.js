@@ -50,7 +50,7 @@ function Home({ url }) {
               );
             }
             return (
-              <div className='col-md-4 ' key={i}>
+              <div className='col-md-4 my-3 my-md-0' key={i}>
                 <Card character={character} setDisplayTeam={setDisplayTeam} />
               </div>
             );

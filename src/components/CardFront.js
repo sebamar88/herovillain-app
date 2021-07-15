@@ -76,9 +76,9 @@ function CardFront({ name, image, powerstats, id, isFlipped, setDisplayTeam }) {
           </table>
         </div>
 
-        <div class="btn-group" role="group" aria-label="Basic example">
-          <button type="button" onClick={() => isFlipped(false)} class="btn btn-primary">Details</button>
-          <button type="button" onClick={deleteCharacter} class="btn btn-secondary">Delete</button>
+        <div className="btn-group" role="group" aria-label="Basic example">
+          <button type="button" onClick={() => isFlipped(false)} className="btn btn-primary">Details</button>
+          <button type="button" onClick={deleteCharacter} className="btn btn-secondary">Delete</button>
         </div>
       </div>
 

@@ -36,13 +36,7 @@ footer.bottom.footer {
   background-image: url('./images/heroes-bg.jpg');
   background-size: cover;
 }
-.columns {
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-.level {
-  border-radius: 5px;
-}
+
 /* width */
 ::-webkit-scrollbar {
   width: 5px;
@@ -59,62 +53,21 @@ footer.bottom.footer {
   background: #3273dcb0; 
   border-radius: 1px;
 }
+
 @media screen and (min-width: 770px){
-  .card .card-content{
-    min-width: 160px;
-  }
- 
-}
-@media screen and (min-width: 770px) and (max-width: 1024px){
-  .column.is-3 {
-    width: 52%;
-  }
-  .columns {
-    width: 60%;
-    display: flex;
-    justify-content: center;
-  }
-  .column.is-3 .content table.table {
-    width: 40%;
-    margin-left: 2%;
-  }
-  .media {
-    width: 46%;
-  }
-  .level {
-    flex-wrap: wrap;
+  .col-md-1 p{
+    font-size: .78rem;
   }
 
 }
-@media screen and (min-width: 1024px) {
-  .column.is-3 {
-    width: 25%;
-  }
-  .columns {
-    width: 100%;
-  }
-  .column.is-3 .content table.table {
-    width: 47%;
-    margin-left: 5%;
-  }
-  .media {
-    width: 52%;
-  }
-  
-}
-@media screen and (min-width: 1380px) {
 
-  .column.is-3 .content table.table {
-    width: 65%;
-    margin-left: 10%;
-  } 
-}
+
 
 p.title{
   margin:0
 }
 
 .card figure {
-  height: 300px !important;
+  height: 350px !important;
   overflow: hidden;
 }

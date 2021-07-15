@@ -33,10 +33,10 @@ function Header({ setIsAuth }) {
   id="navbarScroll">
     <ul className="navbar-nav mr-auto ml-4 my-2 my-lg-0 navbar-nav-scroll">
       <li className="nav-item active">
-        <a className="nav-link text-danger" href="/">Home <span className="sr-only">(current)</span></a>
+        <a className="nav-link text-danger font-weight-bold" href="/">Home <span className="sr-only">(current)</span></a>
       </li>
       <li className="nav-item">
-        <a className="nav-link text-danger" href="/search">Search</a>
+        <a className="nav-link text-danger font-weight-bold" href="/search">Search</a>
       </li>
     </ul>
     <form className="d-flex">

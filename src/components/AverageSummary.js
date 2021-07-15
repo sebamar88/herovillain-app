@@ -35,23 +35,23 @@ function AverageSummary({ teamHeroes }) {
     <>
       <div className='tags has-addons mb-0 is-justify-content-center'>
         {teamCategory ? 
-        <button type="button" class="btn btn-light my-3">
-          Team Category <span class="badge badge-danger">{teamCategory}</span>
-          <span class="sr-only">Team Category {teamCategory}</span>
+        <button type="button" className="btn btn-light my-3">
+          Team Category <span className="badge badge-danger">{teamCategory}</span>
+          <span className="sr-only">Team Category {teamCategory}</span>
         </button>
         
         : 
-        <div class="alert alert-danger" role="alert">
+        <div className="alert alert-danger" role="alert">
           You have not selected any hero or villain yet.
         </div>
         }
       </div>
-      <div className='text-white d-inline-flex justify-content-center mb-5 rounded-lg'>
+      <div className='text-white row no-gutters justify-content-center mb-5 rounded-lg'>
         {teamSum !== {}
           ? Object.keys(teamSum).map((key, i) => {
               return (
-                <div className={i%2 == 0 ? 'p-2 bg-primary rounded-lg': 'p-2 bg-info mx-2 rounded-lg'} key={i}>
-                  <div className='div'>
+                <div className='col-6 col-md-1' key={i}>
+                  <div className={i%2 === 0 ? ' bg-primary rounded-lg p-1' : 'bg-info rounded-lg p-1'}>
                     <p className='heading'>
                       {key === 'weight' || key === 'height'
                         ? `${key} Average`
