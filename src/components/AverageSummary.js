@@ -46,11 +46,11 @@ function AverageSummary({ teamHeroes }) {
         </div>
         }
       </div>
-      <div className='bg-secondary text-white d-flex justify-content-center mb-5'>
+      <div className='text-white d-inline-flex justify-content-center mb-5 rounded-lg'>
         {teamSum !== {}
           ? Object.keys(teamSum).map((key, i) => {
               return (
-                <div className='level-item has-text-centered m-2' key={i}>
+                <div className={i%2 == 0 ? 'p-2 bg-primary rounded-lg': 'p-2 bg-info mx-2 rounded-lg'} key={i}>
                   <div className='div'>
                     <p className='heading'>
                       {key === 'weight' || key === 'height'
