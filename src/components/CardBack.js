@@ -4,32 +4,26 @@ function CardBack({ appearance, biography, image, work, name, isFlipped }) {
   const alignment = biography.alignment === 'good' ? 'Hero' : 'Villain';
   const base = work.base.split(', ');
   return (
-    <div className='card'>
-      <div className='card-content mx-3 p-0 pt-2'>
-        <div className='media'>
-          <div className='media-left'>
-            <figure className='image is-96x96 is-square'>
-              <img src={image.url} alt={name} />
-            </figure>
-          </div>
-          <div className='media-content'>
-            <p className='has-text-weight-semibold is-uppercase mb-0'>{name}</p>
-            <p className='subtitle is-6 mb-2'>{biography.aliases[0]}</p>
+
+    <div className="card">
+      <figure>
+
+      <img className="img-fluid card-img-top" src={image.url} alt={name} />
+      </figure>
+      <p className=' mb-2'>{biography.aliases[0]}</p>
             <span
               className={
-                alignment !== 'Hero' ? 'tag is-danger' : 'tag is-success'
+                alignment !== 'Hero' ? 'badge badge-danger' : 'badge badge-success'
               }
             >
               {alignment}
             </span>
-          </div>
-        </div>
-        <div className='content is-small'>
-          <div className='subtitle is-size-5 mb-3 has-text-weight-semibold'>
-            Caracter Facts
+        <div className="card-body">
+          <div className='h3 mb-3 uppercase font-weight-bold'>
+            {name}
           </div>
           <table className='table is-narrow'>
-            <tbody>
+          <tbody>
               <tr>
                 <th>Full Name</th>
                 <td>{biography['full-name']}</td>
@@ -65,16 +59,16 @@ function CardBack({ appearance, biography, image, work, name, isFlipped }) {
             </tbody>
           </table>
         </div>
-      </div>
-      <footer className='card-footer'>
         <button
           onClick={() => isFlipped(true)}
-          className='card-footer-item button is-light is-link '
+          className='btn btn-secondary'
         >
           Back
         </button>
-      </footer>
-    </div>
+        
+      </div>
+
+    
   );
 }
 
